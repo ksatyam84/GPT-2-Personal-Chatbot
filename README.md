@@ -273,59 +273,6 @@ Training Hyperparameters:
 └── Loss Function: Cross-Entropy (with masking)
 ```
 
-### Memory Requirements
 
-| Precision | Model Size | Training | Inference |
-|-----------|------------|----------|-----------|
-| FP32 | ~500 MB | ~8 GB | ~2 GB |
-| FP16 | ~250 MB | ~4 GB | ~1 GB |
-| INT8 | ~125 MB | N/A | ~500 MB |
 
-### Key Implementation Details
-
-1. **Multi-Head Attention**
-   - Parallel computation of Q, K, V projections
-   - Scaled dot-product attention
-   - Causal masking for autoregressive generation
-
-2. **Layer Normalization**
-   - Pre-normalization (before attention and FFN)
-   - Learnable scale and shift parameters
-   - Numerical stability with epsilon = 1e-5
-
-3. **Feed-Forward Network**
-   - Expansion factor: 4× (768 → 3,072 → 768)
-   - GELU activation function
-   - Dropout for regularization
-
-4. **Training Optimizations**
-   - Gradient clipping (max norm = 1.0)
-   - Learning rate warmup
-   - Custom padding and masking for efficiency
-
----
-
-## 🔮 Future Work
-
-### Immediate Improvements
-- [ ] Implement mixed precision training (FP16/BF16)
-- [ ] Add gradient checkpointing for memory efficiency
-- [ ] Create interactive web interface (Gradio/Streamlit)
-- [ ] Deploy as REST API (FastAPI)
-
-### Advanced Features
-- [ ] **LoRA Fine-Tuning**: Parameter-efficient fine-tuning
-- [ ] **RLHF**: Reinforcement learning from human feedback
-- [ ] **Multi-GPU Training**: Distributed training support
-- [ ] **Longer Context**: Extend to 2K or 4K tokens
-- [ ] **Larger Models**: Scale to 355M, 774M parameters
-
-### Applications
-- [ ] Domain-specific chatbots (medical, legal, technical)
-- [ ] Code completion and generation
-- [ ] Creative writing assistant
-- [ ] Question answering system
-- [ ] Dialogue summarization
-
----
 
