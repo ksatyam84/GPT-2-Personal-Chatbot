@@ -215,31 +215,6 @@ custom_data = [
 
 ---
 
-## 📁 Project Structure
-
-```
-GPT2-Personal-Chatbot/
-│
-├── Fine-tuned LLM Evaluation.ipynb   # Main notebook
-├── GPT2_CHATBOT_README.md             # This file
-├── requirements.txt                    # Dependencies
-│
-├── models/                             # Saved model checkpoints
-│   ├── gpt2_pretrained.pth
-│   └── gpt2_finetuned.pth
-│
-├── data/                               # Training data
-│   ├── training_text.txt
-│   └── instruction_dataset.json
-│
-└── outputs/                            # Generated outputs
-    ├── loss-plot.pdf
-    ├── accuracy-plot.pdf
-    └── sample_generations.txt
-```
-
----
-
 ## 📊 Results
 
 ### Model Performance
@@ -354,22 +329,3 @@ Training Hyperparameters:
 
 ---
 
-## 📚 References
-
-1. **Attention Is All You Need**  
-   Vaswani et al., 2017  
-   https://arxiv.org/abs/1706.03762
-
-2. **Language Models are Unsupervised Multitask Learners** (GPT-2)  
-   Radford et al., 2019  
-   https://openai.com/research/better-language-models
-
-3. **Build a Large Language Model (From Scratch)**  
-   Sebastian Raschka, 2024  
-   Manning Publications
-
-4. **PyTorch Documentation**  
-   https://pytorch.org/docs/
-
-5. **Hugging Face Transformers**  
-   https://huggingface.co/docs/transformers/
